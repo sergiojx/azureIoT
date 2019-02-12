@@ -2,7 +2,7 @@
 ## Create IoT Hub
 ## Device Register
 ## Proton Thing Implementation-Configration
-![Alt text](rhttps://bitbucket.org/sergiojx/proton-azure-iot/downloads/img1.png?raw=true "Title")
+![Alt text](https://bitbucket.org/sergiojx/proton-azure-iot/downloads/img1.png?raw=true "Title")
 ## Proton DB Variable Mapping
 ## Divice Explorer Verification.
 ### Note: Current systems time zone
