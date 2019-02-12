@@ -1,4 +1,36 @@
 # Proton Azure IoT Getting Started
+
+---
+platform: Linux
+device: Proton
+language: NA
+---
+
+Getting started with Proton and Azure IoT  
+===
+---
+
+# Table of Contents
+
+-   [Introduction](#Introduction)
+-   [Step 1: Prerequisites](#Prerequisites)
+-   [Step 2: Prepare your Device](#PrepareDevice)
+-   [Step 3: Build and Run the Sample](#Build)
+-   [Next Steps](#NextSteps)
+
+<a name="Introduction"></a>
+# Introduction
+
+**About this document**
+
+This document describes how to connect unitech PA692A with Azure IoT SDK. This multi-step process includes:
+-   Configuring Azure IoT Hub
+-   Registering your IoT device
+-   Build and deploy Azure IoT SDK on device
+
+<a name="Prerequisites"></a>
+# Step 1: Prerequisites
+
 ## Create IoT Hub
 ## Device Register
 ## Proton Thing Implementation-Configration
