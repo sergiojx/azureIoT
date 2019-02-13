@@ -33,8 +33,8 @@ This document describes how to connect UP-Squared running Android Nougat (v7.1) 
 You should have the following items ready before beginning the process:
 
 -  A computer this Chrome web browser
--  [Setup your IoT hub](local://base_request.html/Azure/azure-iot-device-ecosystem/blob/master/setup_iothub.md)
--  [Provision your device and get its credentials](local://base_request.html/Azure/azure-iot-device-ecosystem/blob/master/manage_iot_hub.md)
+-  [Setup your IoT hub](https://github.com/Azure/azure-iot-device-ecosystem/blob/master/setup_iothub.md)
+-  [Provision your device and get its credentials](https://github.com/Azure/azure-iot-device-ecosystem/blob/master/manage_iot_hub.md)
 -  Proton Unit.
 
 <a name="PrepareDevice"></a>
