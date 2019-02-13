@@ -1,12 +1,10 @@
-# Proton Azure IoT Getting Started
-
 ---
-platform: Linux
-device: Proton
-language: NA
+platform: android
+device: up board
+language: java
 ---
 
-Getting started with Proton and Azure IoT  
+Run a simple Java sample on UP Board device running Android Marshmallow (v6.0)
 ===
 ---
 
@@ -23,7 +21,8 @@ Getting started with Proton and Azure IoT
 
 **About this document**
 
-This document describes how to connect unitech PA692A with Azure IoT SDK. This multi-step process includes:
+This document describes how to connect UP-Squared running Android Nougat (v7.1) with Azure IoT SDK. This multi-step process includes:
+
 -   Configuring Azure IoT Hub
 -   Registering your IoT device
 -   Build and deploy Azure IoT SDK on device
@@ -31,55 +30,98 @@ This document describes how to connect unitech PA692A with Azure IoT SDK. This m
 <a name="Prerequisites"></a>
 # Step 1: Prerequisites
 
-## Create IoT Hub
-## Device Register
-## Proton Thing Implementation-Configration
-![Alt text](https://bitbucket.org/sergiojx/proton-azure-iot/downloads/img1.png?raw=true "Title")
-## Proton DB Variable Mapping
-## Divice Explorer Verification.
-### Note: Current systems time zone
-**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**
+You should have the following items ready before beginning the process:
 
-When you're done, you can delete the content in this README and update the file with details for others getting started with your repository.
+-  Prepare your development environment:
+ -   Download and install latest JDK from [here](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
+ -   Download [Android Studio](https://developer.android.com/studio/index.html) on your Windows machine and follow the installation instructions.
+ -   Computer with Git client installed and access to the [azure-iot-sdk-java](https://github.com/Azure/azure-iot-sdk-java) GitHub public repository.
+-   [Setup your IoT hub](local://base_request.html/Azure/azure-iot-device-ecosystem/blob/master/setup_iothub.md)
+-   [Provision your device and get its credentials](local://base_request.html/Azure/azure-iot-device-ecosystem/blob/master/manage_iot_hub.md)
+-   UP board.
 
-*We recommend that you open this README in another tab as you perform the tasks below. You can [watch our video](https://youtu.be/0ocf7u76WSo) for a full demo of all the steps in this tutorial. Open the video in a new tab to avoid leaving Bitbucket.*
+<a name="PrepareDevice"></a>
+# Step 2: Prepare your Device
 
----
 
-## Edit a file
+# Step 3: Build and Validate the sample using Java client libraries
 
-You’ll start by editing this README file to learn how to edit a file in Bitbucket.
+<a name="Load"></a>
+## 3.1 Prepare your development environment
 
-1. Click **Source** on the left side.
-2. Click the README.md link from the list of files.
-3. Click the **Edit** button.
-4. Delete the following text: *Delete this line to make a change to the README from Bitbucket.*
-5. After making your change, click **Commit** and then **Commit** again in the dialog. The commit page will open and you’ll see the change you just made.
-6. Go back to the **Source** page.
+-   Download and install latest JDK from [here](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
 
----
+-   Download [Android Studio](https://developer.android.com/studio/index.html) on your Windows machine and follow the installation instructions.
 
-## Create a file
+-   Plug in your device to your development machine with a USB cable. If you're developing on Windows, you might need to install the appropriate USB driver for your device. For help installing drivers, see the [OEM USB Drivers](https://developer.android.com/studio/run/oem-usb.html) document.
 
-Next, you’ll add a new file to this repository.
+-   Enable USB debugging on your device. On Android 4.0 and newer, go to Settings > Developer options.
 
-1. Click the **New file** button at the top of the **Source** page.
-2. Give the file a filename of **contributors.txt**.
-3. Enter your name in the empty file space.
-4. Click **Commit** and then **Commit** again in the dialog.
-5. Go back to the **Source** page.
+    **Note:** *On Android 4.2 and newer, Developer options is hidden by default. To make it available, go to Settings > About phone and tap Build number seven times. Return to the previous screen to find Developer options.*
+-   Connect your device to internet.
 
-Before you move on, go ahead and explore the repository. You've already seen the **Source** page, but check out the **Commits**, **Branches**, and **Settings** pages.
+<a name="BuildSamples"></a>
+## 3.2 Build the samples
 
----
+1.   Start a new instance of Android Studio and open Android project from here:
 
-## Clone a repository
+        azure-iot-sdk-java/device/iot-device-samples/android-sample/
 
-Use these steps to clone from SourceTree, our client for using the repository command-line free. Cloning allows you to work on your files locally. If you don't yet have SourceTree, [download and install first](https://www.sourcetreeapp.com/). If you prefer to clone from the command line, see [Clone a repository](https://confluence.atlassian.com/x/4whODQ).
+2.   Go to **MainActivity.java**, replace the **[device connection string]** placeholder with connection string of the device you have created in [Provision your device and get its credentials](local://base_request.html/Azure/azure-iot-device-ecosystem/blob/master/manage_iot_hub.md) and save the file. An example of IoT Hub Connection String is as below:
 
-1. You’ll see the clone button under the **Source** heading. Click that button.
-2. Now click **Check out in SourceTree**. You may need to create a SourceTree account or log in.
-3. When you see the **Clone New** dialog in SourceTree, update the destination path and name if you’d like to and then click **Clone**.
-4. Open the directory you just created to see your repository’s files.
+        HostName=[YourIoTHubName];SharedAccessKeyName=[YourAccessKeyName];SharedAccessKey=[YourAccessKey]
+  Also replace the device ID with AAEON-UP-SQUARED-ANDROID device ID
 
-Now that you're more familiar with your Bitbucket repository, go ahead and add a new file locally. You can [push your change back to Bitbucket with SourceTree](https://confluence.atlassian.com/x/iqyBMg), or you can [add, commit,](https://confluence.atlassian.com/x/8QhODQ) and [push from the command line](https://confluence.atlassian.com/x/NQ0zDQ).
+3.   Build your project by going to **Build** menu **> Make Project**.
+
+<a name="Run"></a>
+## 3.3 Run and Validate the Samples
+   In this section you will run the Azure IoT client SDK samples to validate communication between your device and Azure IoT Hub. You will send messages to the Azure IoT Hub service and validate that IoT Hub has successfully receive the data. You will also monitor any messages sent from the Azure IoT Hub to client.
+
+### 3.3.1 Run the Sample:
+
+### Run on the Device
+
+-   Select one of your project's files and click Run from the toolbar.
+
+-   In the Choose Device window that appears, select the **Choose a running device** radio button, select AAEON-UP APL01 device, and click OK.
+
+-   Android Studio will install the app on your connected device and starts it.
+
+
+### 3.3.2 Send Device Events to IoT Hub:
+
+-   See [Manage IoT Hub](local://base_request.html/Azure/azure-iot-device-ecosystem/blob/master/manage_iot_hub.md) to learn how to observe the messages IoT Hub receives from the application.
+-   As soon as you run the app on your device, it will start sending messages to IoTHub.
+-   Check the **Android Monitor** window in Android Studio. Verify that the confirmation messages show an OK. If not, then you may have incorrectly copied the device hub connection information.
+-   use device explorer application in Azure Iot SDK to watch the sent messages
+
+### 3.3.3 Receive messages from IoT Hub
+
+-   See [Manage IoT Hub](local://base_request.html/Azure/azure-iot-device-ecosystem/blob/master/manage_iot_hub.md) to learn how to send cloud-to-device messages to the application.
+-   Click the **Receive Messages** button from the sample App UI.
+-   Check the **Android Monitor** window in Android Studio. You should be able to see the command received.
+-   use device explorer application in Azure Iot SDK to watch the received messages
+
+<a name="NextSteps"></a>
+# Next Steps
+ 
+You have now learned how to run a sample application that collects sensor data and sends it to your IoT hub. To explore how to store, analyze and visualize the data from this application in Azure using a variety of different services, please click on the following lessons:
+ 
+-   [Manage cloud device messaging with iothub-explorer]
+-   [Save IoT Hub messages to Azure data storage]
+-   [Use Power BI to visualize real-time sensor data from Azure IoT Hub]
+-   [Use Azure Web Apps to visualize real-time sensor data from Azure IoT Hub]
+-   [Weather forecast using the sensor data from your IoT hub in Azure Machine Learning]
+-   [Remote monitoring and notifications with Logic Apps]   
+ 
+[Manage cloud device messaging with iothub-explorer]: https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-explorer-cloud-device-messaging
+[Save IoT Hub messages to Azure data storage]: https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-store-data-in-azure-table-storage
+[Use Power BI to visualize real-time sensor data from Azure IoT Hub]: https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-live-data-visualization-in-power-bi
+[Use Azure Web Apps to visualize real-time sensor data from Azure IoT Hub]: https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-live-data-visualization-in-web-apps
+[Weather forecast using the sensor data from your IoT hub in Azure Machine Learning]: https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-weather-forecast-machine-learning
+[Remote monitoring and notifications with Logic Apps]: https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-monitoring-notifications-with-azure-logic-apps
+[setup-devbox-linux]: https://github.com/Azure/azure-iot-device-ecosystem/blob/master/get_started/node-devbox-setup.md
+[lnk-setup-iot-hub]: ../setup_iothub.md
+[lnk-manage-iot-hub]: ../manage_iot_hub.md
+ 
