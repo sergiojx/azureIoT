@@ -21,7 +21,7 @@ Configure a simple MODBUS database data mapping and transmission
 
 **About this document**
 
-This document describes how to connect UP-Squared running Android Nougat (v7.1) with Azure IoT SDK. This multi-step process includes:
+This document describes how setup a transmission agent that transmit data to Azure IoT Hub. This multi-step process includes:
 
 -   Configuring Azure IoT Hub
 -   Registering your IoT device
