@@ -51,18 +51,10 @@ Configure device and gateway IPs
 ![picture](https://bitbucket.org/sergiojx/proton-azure-iot/downloads/img2.png = 100x20)
 
 <a name="BuildSamples"></a>
-## 3.2 Build the samples
+## 3.2 Set device credential
 
-1.   Start a new instance of Android Studio and open Android project from here:
+![picture](https://bitbucket.org/sergiojx/proton-azure-iot/downloads/img3.png = 100x20)
 
-        azure-iot-sdk-java/device/iot-device-samples/android-sample/
-
-2.   Go to **MainActivity.java**, replace the **[device connection string]** placeholder with connection string of the device you have created in [Provision your device and get its credentials](local://base_request.html/Azure/azure-iot-device-ecosystem/blob/master/manage_iot_hub.md) and save the file. An example of IoT Hub Connection String is as below:
-
-        HostName=[YourIoTHubName];SharedAccessKeyName=[YourAccessKeyName];SharedAccessKey=[YourAccessKey]
-  Also replace the device ID with AAEON-UP-SQUARED-ANDROID device ID
-
-3.   Build your project by going to **Build** menu **> Make Project**.
 
 <a name="Run"></a>
 ## 3.3 Run and Validate the Samples
