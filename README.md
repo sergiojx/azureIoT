@@ -47,6 +47,7 @@ Configure device and gateway IPs
 ## 3.1 Create a transmission agent
 
 ![picture](https://bitbucket.org/sergiojx/proton-azure-iot/downloads/img1.png)
+![picture](https://bitbucket.org/sergiojx/proton-azure-iot/downloads/img2.png = 100x20)
 
 <a name="BuildSamples"></a>
 ## 3.2 Build the samples
