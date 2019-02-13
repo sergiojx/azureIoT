@@ -1,7 +1,7 @@
 ---
 platform: Linux
 device: Pronto Industrial RTU
-language: java
+language: NA
 ---
 
 Configure a simple MODBUS database data mapping and transmission
@@ -39,23 +39,14 @@ You should have the following items ready before beginning the process:
 
 <a name="PrepareDevice"></a>
 # Step 2: Prepare your Device
+Configure device and gateway IPs
 
-
-# Step 3: Build and Validate the sample using Java client libraries
+# Step 3: Run Sampple
 
 <a name="Load"></a>
-## 3.1 Prepare your development environment
+## 3.1 Create a transmission agent
 
--   Download and install latest JDK from [here](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
-
--   Download [Android Studio](https://developer.android.com/studio/index.html) on your Windows machine and follow the installation instructions.
-
--   Plug in your device to your development machine with a USB cable. If you're developing on Windows, you might need to install the appropriate USB driver for your device. For help installing drivers, see the [OEM USB Drivers](https://developer.android.com/studio/run/oem-usb.html) document.
-
--   Enable USB debugging on your device. On Android 4.0 and newer, go to Settings > Developer options.
-
-    **Note:** *On Android 4.2 and newer, Developer options is hidden by default. To make it available, go to Settings > About phone and tap Build number seven times. Return to the previous screen to find Developer options.*
--   Connect your device to internet.
+![picture](Downloads/img1.png)
 
 <a name="BuildSamples"></a>
 ## 3.2 Build the samples
