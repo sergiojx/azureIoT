@@ -86,7 +86,7 @@ Configure device and gateway IPs
 
 
 
-### 34.2 Receive messages from IoT Hub
+### 4.2 Receive messages from IoT Hub
 
 
 
