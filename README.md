@@ -43,19 +43,25 @@ Configure device and gateway IPs
 
 # Step 3: Run Sampple
 
-<a name="Load"></a>
+<a name="Create"></a>
 ## 3.1 Create a transmission agent
 
 ![picture](https://bitbucket.org/sergiojx/proton-azure-iot/downloads/img1.png)
 ****
 ![picture](https://bitbucket.org/sergiojx/proton-azure-iot/downloads/img2.png = 100x20)
 
-<a name="BuildSamples"></a>
-## 3.2 Set device credential
+<a name="Credentail"></a>
+## 3.2 Set device credentials and transmission scheme
 
 ![picture](https://bitbucket.org/sergiojx/proton-azure-iot/downloads/img3.png = 100x20)
 
 
+<a name="Mapping"></a>
+## 3.2 Map MODBUS database variables to IoT transmission frame
+
+![picture](https://bitbucket.org/sergiojx/proton-azure-iot/downloads/img4.png = 100x20)
+****
+![picture](https://bitbucket.org/sergiojx/proton-azure-iot/downloads/img5.png = 100x20)
 <a name="Run"></a>
 ## 3.3 Run and Validate the Samples
    In this section you will run the Azure IoT client SDK samples to validate communication between your device and Azure IoT Hub. You will send messages to the Azure IoT Hub service and validate that IoT Hub has successfully receive the data. You will also monitor any messages sent from the Azure IoT Hub to client.
