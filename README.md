@@ -1,10 +1,10 @@
 ---
-platform: android
-device: up board
+platform: Linux
+device: Pronto Industrial RTU
 language: java
 ---
 
-Run a simple Java sample on UP Board device running Android Marshmallow (v6.0)
+Configure a simple MODBUS database data mapping and transmission
 ===
 ---
 
@@ -25,7 +25,7 @@ This document describes how to connect UP-Squared running Android Nougat (v7.1) 
 
 -   Configuring Azure IoT Hub
 -   Registering your IoT device
--   Build and deploy Azure IoT SDK on device
+-   Proton Configuration
 
 <a name="Prerequisites"></a>
 # Step 1: Prerequisites
@@ -33,12 +33,10 @@ This document describes how to connect UP-Squared running Android Nougat (v7.1) 
 You should have the following items ready before beginning the process:
 
 -  Prepare your development environment:
- -   Download and install latest JDK from [here](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
- -   Download [Android Studio](https://developer.android.com/studio/index.html) on your Windows machine and follow the installation instructions.
- -   Computer with Git client installed and access to the [azure-iot-sdk-java](https://github.com/Azure/azure-iot-sdk-java) GitHub public repository.
--   [Setup your IoT hub](local://base_request.html/Azure/azure-iot-device-ecosystem/blob/master/setup_iothub.md)
--   [Provision your device and get its credentials](local://base_request.html/Azure/azure-iot-device-ecosystem/blob/master/manage_iot_hub.md)
--   UP board.
+-  A computer this Chrome web browser
+-  [Setup your IoT hub](local://base_request.html/Azure/azure-iot-device-ecosystem/blob/master/setup_iothub.md)
+-  [Provision your device and get its credentials](local://base_request.html/Azure/azure-iot-device-ecosystem/blob/master/manage_iot_hub.md)
+-  Proton Unit.
 
 <a name="PrepareDevice"></a>
 # Step 2: Prepare your Device
