@@ -94,4 +94,67 @@ Configure device and gateway IPs
 # Next Steps
  
 
+ # Azure IoT C SDK Compilation on VAR-SOM-MX7 : NXP/Freescale iMX7
+ ## WiFi Setup
+ ``
+ nano /etc/wpa_supplicant.conf
+ ``
  
+ ``
+ network={
+         ssid="wifi_name"
+         psk="wifi_key"
+}
+ ``
+ 
+ ``
+ip link set wlan0 down
+ip link set wlan0 up
+wpa_supplicant -iwlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf
+
+ ``
+ 
+ In a different terminal
+ ``
+ dhclient wlan0
+ ``
+Once internet acces is verified
+## Azure IoT dev apt-get
+ ``
+ap-get update
+apt-get install -y git
+apt-get install -y cmake
+apt-get install -y build-essential
+apt-get install -y curl
+apt-get install -y libcurl4-openssl-dev
+apt-get install -y libssl-dev
+apt-get install -y uuid-dev
+ ``
+ 
+### Install rsync
+ ``
+ap-get update
+apt-get install rsync
+ ``
+ 
+### sync usr and lib into development machine
+ ``
+rsync -rl --safe-links pi@<your Pi identifier>:/{lib,usr} /home/sergio/usr_lib.DEV/
+ ``
+ 
+ ### openssl path setup
+ in home/.profile add
+  ``
+ export OPENSSL_ROOT_DIR=/home/sergio/usr_lib.DEV/usr/lib/arm-linux-gnueabihf
+ ``
+ 
+ then
+   ``
+ . ~/.profile
+   ``
+ 
+ 
+ ### Compilation commands
+   ``
+ sergio@ubuntu:~/azure-iot-sdk-c/build_all/linux$ ./build.sh --toolchain-file toolchain-prtn.cmake  --no-amqp --no-http -cl -DMBED_BUILD_TIMESTAMP  -cl --sysroot=/home/sergio/usr_lib.DEV
+   ``
