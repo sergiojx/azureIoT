@@ -99,20 +99,18 @@ Configure device and gateway IPs
 ``
  nano /etc/wpa_supplicant.conf
 ``
- 
-``
+```ruby
  network={
          ssid="wifi_name"
          psk="wifi_key"
 }
-``
+```
  
-``
+```ruby
 ip link set wlan0 down
 ip link set wlan0 up
 wpa_supplicant -iwlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf
-
-``
+```
  
 In a different terminal
 ``
@@ -120,22 +118,22 @@ dhclient wlan0
 ``
 Once internet acces is verified
 ## Azure IoT dev apt-get
-``
+```ruby
 ap-get update
-apt-get install -y git
+apt-get install -y git 
 apt-get install -y cmake
 apt-get install -y build-essential
 apt-get install -y curl
 apt-get install -y libcurl4-openssl-dev
 apt-get install -y libssl-dev
 apt-get install -y uuid-dev
-``
+```
  
 ### Install rsync
-``
+```
 ap-get update
 apt-get install rsync
-``
+```
  
 ### sync usr and lib into development machine
 ``
