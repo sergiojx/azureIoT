@@ -151,7 +151,48 @@ then
 . ~/.profile
 ``
  
- 
+### Cmake compilation
+```ruby
+root@var-som-mx7:/home/user/home/sergio/azure-iot-sdk-c# mkdir cmake
+root@var-som-mx7:/home/user/home/sergio/azure-iot-sdk-c# cd cmake/
+root@var-som-mx7:/home/user/home/sergio/azure-iot-sdk-c/cmake# ls
+
+root@var-som-mx7:/home/user/home/sergio/azure-iot-sdk-c/cmake# cmake ..
+-- The C compiler identification is GNU 6.3.0
+-- The CXX compiler identification is GNU 6.3.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- IoT Client SDK Version = 1.2.13
+-- Looking for include file stdint.h
+-- Looking for include file stdint.h - found
+-- Looking for include file stdbool.h
+-- Looking for include file stdbool.h - found
+-- target architecture: ARM
+-- Performing Test CXX_FLAG_CXX11
+-- Performing Test CXX_FLAG_CXX11 - Success
+-- Found OpenSSL: /usr/lib/arm-linux-gnueabihf/libssl.so;/usr/lib/arm-linux-gnueabihf/libcrypto.so (found version "1.1.0j")
+-- Could NOT find PkgConfig (missing:  PKG_CONFIG_EXECUTABLE)
+-- Found CURL: /usr/lib/arm-linux-gnueabihf/libcurl.so (found version "7.52.1")
+-- Found CURL: /usr/lib/arm-linux-gnueabihf/libcurl.so
+-- target architecture: ARM
+-- target architecture: ARM
+-- target architecture: ARM
+-- target architecture: ARM
+-- iothub architecture: ARM
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/user/home/sergio/azure-iot-sdk-c/cmake
+```
 ### Compilation commands
 ``
 sergio@ubuntu:~/azure-iot-sdk-c/build_all/linux$ ./build.sh --toolchain-file toolchain-prtn.cmake  --no-amqp --no-http -cl -DMBED_BUILD_TIMESTAMP  -cl --sysroot=/home/sergio/usr_lib.DEV
