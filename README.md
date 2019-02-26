@@ -527,3 +527,16 @@ root@var-som-mx7:/home/user/home/sergio/azure-iot-sdk-c/cmake#
 ``
 sergio@ubuntu:~/azure-iot-sdk-c/build_all/linux$ ./build.sh --toolchain-file toolchain-prtn.cmake  --no-amqp --no-http -cl -DMBED_BUILD_TIMESTAMP  -cl --sysroot=/home/sergio/usr_lib.DEV
 ``
+
+### Other fixes
+``
+sergio@ubuntu:~/usr_lib.DEVX/usr/lib/arm-linux-gnueabihf$ ln -s libdl-2.24.so libdl.so.2
+``
+
+``
+copy /home/sergio/azure-iot-sdk-c/certs/certs.h to /home/sergio/usr_lib.DEVX/usr/include
+``
+
+``
+copy /home/sergio/azure-iot-sdk-c/certs/certs.c content  into  /home/sergio/azure-iot-sdk-c/iothub_client/samples/iothub_ll_client_x509_sample/iothub_ll_client_x509_sample.c
+``
