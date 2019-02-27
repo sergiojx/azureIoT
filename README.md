@@ -544,3 +544,7 @@ copy /home/sergio/azure-iot-sdk-c/certs/certs.c content  into  /home/sergio/azur
 ``
 sergio@ubuntu:~/usr_lib.DEVX$ cp ./lib/arm-linux-gnueabihf/libcom_err.so.2 ./usr/lib/arm-linux-gnueabihf/
 ``
+
+``
+sergio@ubuntu:~/usr_lib.DEVX$ cp ./lib/arm-linux-gnueabihf/libz.so.1 ./usr/lib/arm-linux-gnueabihf/
+``
