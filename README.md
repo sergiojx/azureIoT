@@ -540,3 +540,7 @@ copy /home/sergio/azure-iot-sdk-c/certs/certs.h to /home/sergio/usr_lib.DEVX/usr
 ``
 copy /home/sergio/azure-iot-sdk-c/certs/certs.c content  into  /home/sergio/azure-iot-sdk-c/iothub_client/samples/iothub_ll_client_x509_sample/iothub_ll_client_x509_sample.c
 ``
+
+``
+sergio@ubuntu:~/usr_lib.DEVX$ cp ./lib/arm-linux-gnueabihf/libcom_err.so.2 ./usr/lib/arm-linux-gnueabihf/
+``
