@@ -527,6 +527,43 @@ root@var-som-mx7:/home/user/home/sergio/azure-iot-sdk-c/cmake#
 ``
 sergio@ubuntu:~/azure-iot-sdk-c/build_all/linux$ ./build.sh --toolchain-file toolchain-prtn.cmake  --no-amqp --no-http -cl -DMBED_BUILD_TIMESTAMP  -cl --sysroot=/home/sergio/usr_lib.DEV
 ``
+``
+./build.sh --toolchain-file toolchain-prtn.cmake  --no-amqp --no-http -cl -DMBED_BUILD_TIMESTAMP -cl --sysroot=/home/sergio/usr_lib.DEVX
+``
+
+### .profile
+```ruby
+# ~/.profile: executed by the command interpreter for login shells.
+# This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login
+# exists.
+# see /usr/share/doc/bash/examples/startup-files for examples.
+# the files are located in the bash-doc package.
+
+# the default umask is set in /etc/profile; for setting the umask
+# for ssh logins, install and configure the libpam-umask package.
+#umask 022
+
+# if running bash
+if [ -n "$BASH_VERSION" ]; then
+    # include .bashrc if it exists
+    if [ -f "$HOME/.bashrc" ]; then
+	. "$HOME/.bashrc"
+    fi
+fi
+
+# set PATH so it includes user's private bin directories
+PATH="$HOME/bin:$HOME/.local/bin:$PATH"
+
+export PATH=$PATH:/home/sergio/var_som_mx7_debian/toolchain/gcc-linaro-6.3.1-2017.05-x86_64_arm-linux-gnueabihf/bin
+# for clab
+export ARCH=arm
+export CROSS_COMPILE=arm-linux-gnueabihf-
+export VARiMX7_ROOT=/home/sergio/usr_lib.DEVX
+export OPENSSL_ROOT_DIR=/home/sergio/usr_lib.DEVX/usr/lib/arm-linux-gnueabihf
+# for clab
+export DTB="imx7d-*imx7*.dtb"
+```
+
 
 ### Other fixes
 ``
@@ -548,3 +585,17 @@ sergio@ubuntu:~/usr_lib.DEVX$ cp ./lib/arm-linux-gnueabihf/libcom_err.so.2 ./usr
 ``
 sergio@ubuntu:~/usr_lib.DEVX$ cp ./lib/arm-linux-gnueabihf/libz.so.1 ./usr/lib/arm-linux-gnueabihf/
 ``
+
+``
+sergio@ubuntu:~/usr_lib.DEVX$ cp ./lib/arm-linux-gnueabihf/libgcrypt.so.20 ./usr/lib/arm-linux-gnueabihf/
+``
+``
+sergio@ubuntu:~/usr_lib.DEVX$ cp ./lib/arm-linux-gnueabihf/libkeyutils.so.1 ./usr/lib/arm-linux-gnueabihf/
+``
+``
+sergio@ubuntu:~/usr_lib.DEVX$ cp ./lib/arm-linux-gnueabihf/libresolv.so.2 ./usr/lib/arm-linux-gnueabihf/
+``
+``
+sergio@ubuntu:~/usr_lib.DEVX$ cp ./lib/arm-linux-gnueabihf/libgpg-error.so.0 ./usr/lib/arm-linux-gnueabihf/
+``
+
