@@ -524,13 +524,15 @@ Scanning dependencies of target remote_monitoring_client
 root@var-som-mx7:/home/user/home/sergio/azure-iot-sdk-c/cmake#
 ```
 ### Compilation commands
-``
+```
 sergio@ubuntu:~/azure-iot-sdk-c/build_all/linux$ ./build.sh --toolchain-file toolchain-prtn.cmake  --no-amqp --no-http -cl -DMBED_BUILD_TIMESTAMP  -cl --sysroot=/home/sergio/usr_lib.DEV
-``
-``
+```
+```
 ./build.sh --toolchain-file toolchain-prtn.cmake  --no-amqp --no-http -cl -DMBED_BUILD_TIMESTAMP -cl --sysroot=/home/sergio/usr_lib.DEVX
-``
-
+```
+```
+./build.sh --toolchain-file toolchain-prtn.cmake  --no-amqp --no-http --skip-unittests  -cl -DMBED_BUILD_TIMESTAMP -cl -shared -cl --sysroot=/home/sergio/SPX_G25SDK/buildroot-at91/output/host/usr/arm-buildroot-linux-gnueabi/sysroot
+```
 ### .profile
 ```ruby
 # ~/.profile: executed by the command interpreter for login shells.
@@ -569,23 +571,18 @@ export DTB="imx7d-*imx7*.dtb"
 ``
 sergio@ubuntu:~/usr_lib.DEVX/usr/lib/arm-linux-gnueabihf$ ln -s libdl-2.24.so libdl.so.2
 ``
-
 ``
-copy /home/sergio/azure-iot-sdk-c/certs/certs.h to /home/sergio/usr_lib.DEVX/usr/include
-``
+copy /home/sergio/azure-iot-sdk-c/certs/certs.h to /home/sergio/usr_lib.DEVX/usr/include``
 
 ``
 copy /home/sergio/azure-iot-sdk-c/certs/certs.c content  into  /home/sergio/azure-iot-sdk-c/iothub_client/samples/iothub_ll_client_x509_sample/iothub_ll_client_x509_sample.c
 ``
-
 ``
 sergio@ubuntu:~/usr_lib.DEVX$ cp ./lib/arm-linux-gnueabihf/libcom_err.so.2 ./usr/lib/arm-linux-gnueabihf/
 ``
-
 ``
 sergio@ubuntu:~/usr_lib.DEVX$ cp ./lib/arm-linux-gnueabihf/libz.so.1 ./usr/lib/arm-linux-gnueabihf/
 ``
-
 ``
 sergio@ubuntu:~/usr_lib.DEVX$ cp ./lib/arm-linux-gnueabihf/libgcrypt.so.20 ./usr/lib/arm-linux-gnueabihf/
 ``
