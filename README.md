@@ -597,4 +597,16 @@ sergio@ubuntu:~/usr_lib.DEVX$ cp ./lib/arm-linux-gnueabihf/libresolv.so.2 ./usr/
 ``
 sergio@ubuntu:~/usr_lib.DEVX$ cp ./lib/arm-linux-gnueabihf/libgpg-error.so.0 ./usr/lib/arm-linux-gnueabihf/
 ``
+### libm issue
+base line root file systema version of libm.a was not compiled for dynamic allocation, but toolchain version was.So use these
+```
+sergio@ubuntu:~/var_som_mx7_debian/toolchain/gcc-linaro-6.3.1-2017.05-x86_64_arm-linux-gnueabihf$ cp arm-linux-gnueabihf/libc/usr/lib/libm.so /home/sergio/usr_lib.DEVX/usr/lib/arm-linux-gnueabihf/
+```
+```
+sergio@ubuntu:~/var_som_mx7_debian/toolchain/gcc-linaro-6.3.1-2017.05-x86_64_arm-linux-gnueabihf$ cp arm-linux-gnueabihf/libc/usr/lib/libm.a /home/sergio/usr_lib.DEVX/usr/lib/arm-linux-gnueabihf/
+```
+So this comman now works
+```
+sergio@ubuntu:~/azure-iot-sdk-c/build_all/linux$ ./build.sh --toolchain-file toolchain-prtn.cmake  --no-amqp --no-http  -cl -DMBED_BUILD_TIMESTAMP -cl -shared -cl --sysroot=/home/sergio/usr_lib.DEVX
+```
 
