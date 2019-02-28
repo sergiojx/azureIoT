@@ -616,7 +616,7 @@ sergio@ubuntu:~/var_som_mx7_debian/apps/lua-5.1.5/src$ cp luaconf.h ../../../../
 sergio@ubuntu:~/var_som_mx7_debian/apps/lua-5.1.5/src$ cp lauxlib.h ../../../../usr_lib.DEVX/usr/include/
 ```
 
-### openssl
+### openssl opensslconf.h
 ```
 sergio@ubuntu:~/usr_lib.DEVX/usr/include/arm-linux-gnueabihf/openssl$ cp  opensslconf.h ../../openssl
 ```
