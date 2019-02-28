@@ -609,4 +609,14 @@ So this comman now works
 ```
 sergio@ubuntu:~/azure-iot-sdk-c/build_all/linux$ ./build.sh --toolchain-file toolchain-prtn.cmake  --no-amqp --no-http  -cl -DMBED_BUILD_TIMESTAMP -cl -shared -cl --sysroot=/home/sergio/usr_lib.DEVX
 ```
+### lua headers into usr_lib.DEVX
+```
+sergio@ubuntu:~/var_som_mx7_debian/apps/lua-5.1.5/src$ cp lua.h ../../../../usr_lib.DEVX/usr/include/
+sergio@ubuntu:~/var_som_mx7_debian/apps/lua-5.1.5/src$ cp luaconf.h ../../../../usr_lib.DEVX/usr/include/
+sergio@ubuntu:~/var_som_mx7_debian/apps/lua-5.1.5/src$ cp lauxlib.h ../../../../usr_lib.DEVX/usr/include/
+```
 
+### openssl
+```
+sergio@ubuntu:~/usr_lib.DEVX/usr/include/arm-linux-gnueabihf/openssl$ cp  opensslconf.h ../../openssl
+```
