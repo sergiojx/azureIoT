@@ -579,24 +579,24 @@ copy /home/sergio/azure-iot-sdk-c/certs/certs.c content  into  /home/sergio/azur
 ... devicemethod_simplesample.c
 ... simplesample_mqtt.c
 ```
-``
+```
 sergio@ubuntu:~/usr_lib.DEVX$ cp ./lib/arm-linux-gnueabihf/libcom_err.so.2 ./usr/lib/arm-linux-gnueabihf/
-``
-``
+```
+```
 sergio@ubuntu:~/usr_lib.DEVX$ cp ./lib/arm-linux-gnueabihf/libz.so.1 ./usr/lib/arm-linux-gnueabihf/
-``
-``
+```
+```
 sergio@ubuntu:~/usr_lib.DEVX$ cp ./lib/arm-linux-gnueabihf/libgcrypt.so.20 ./usr/lib/arm-linux-gnueabihf/
-``
-``
+```
+```
 sergio@ubuntu:~/usr_lib.DEVX$ cp ./lib/arm-linux-gnueabihf/libkeyutils.so.1 ./usr/lib/arm-linux-gnueabihf/
-``
-``
+```
+```
 sergio@ubuntu:~/usr_lib.DEVX$ cp ./lib/arm-linux-gnueabihf/libresolv.so.2 ./usr/lib/arm-linux-gnueabihf/
-``
-``
+```
+```
 sergio@ubuntu:~/usr_lib.DEVX$ cp ./lib/arm-linux-gnueabihf/libgpg-error.so.0 ./usr/lib/arm-linux-gnueabihf/
-``
+```
 ### libm issue
 base line root file systema version of libm.a was not compiled for dynamic allocation, but toolchain version was.So use these
 ```
