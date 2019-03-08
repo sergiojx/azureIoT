@@ -105,11 +105,11 @@ Configure device and gateway IPs
          psk="wifi_key"
 }
 ```
- 
+ kill every wpa_supplicant and dhclient task before!!!
 ```ruby
 ip link set wlan0 down
 ip link set wlan0 up
-wpa_supplicant -iwlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf
+wpa_supplicant -B -iwlan0 -c /etc/wpa_supplicant.conf
 ```
  
 In a different terminal
