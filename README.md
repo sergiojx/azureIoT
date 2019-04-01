@@ -15,6 +15,7 @@ Configure a simple MODBUS database data mapping and transmission
 -   [Step 2: Prepare your Device](#PrepareDevice)
 -   [Step 3: Build and Run the Sample](#Build)
 -   [Next Steps](#NextSteps)
+-   [VAR GPIO](#GPIOs)
 
 <a name="Introduction"></a>
 # Introduction
@@ -620,3 +621,44 @@ sergio@ubuntu:~/var_som_mx7_debian/apps/lua-5.1.5/src$ cp lauxlib.h ../../../../
 ```
 sergio@ubuntu:~/usr_lib.DEVX/usr/include/arm-linux-gnueabihf/openssl$ cp  opensslconf.h ../../openssl
 ```
+
+# GPIOs
+GPIO3_IO[5] = (3-1)*32+5 = 69
+
+
+J1[7]
+
+echo 69 > /sys/class/gpio/export
+echo out > /sys/class/gpio/gpio69/direction
+echo 1 > /sys/class/gpio/gpio69/value
+echo 0 > /sys/class/gpio/gpio69/value
+echo 69 > /sys/class/gpio/unexport
+
+
+
+echo 103 > /sys/class/gpio/export
+echo out > /sys/class/gpio/gpio103/direction
+echo 1 > /sys/class/gpio/gpio103/value
+echo 0 > /sys/class/gpio/gpio103/value
+echo 103 > /sys/class/gpio/unexport
+
+
+1  MX7D_PAD_LCD_DATA00__GPIO3_IO5		0x79	J1 7	-> 69
+2  MX7D_PAD_LCD_DATA02__GPIO3_IO7 		0x79	J1 9 	-> 71
+3  MX7D_PAD_LCD_DATA03__GPIO3_IO8		0x79	J1 10	-> 72
+4  MX7D_PAD_EPDC_DATA04__GPIO2_IO4		0x79	J2 1	-> 36
+5  MX7D_PAD_EPDC_DATA05__GPIO2_IO5		0x79	J2 2    ->
+6  MX7D_PAD_EPDC_DATA06__GPIO2_IO6 		0x79	J2 3
+7  MX7D_PAD_EPDC_DATA07__GPIO2_IO7		0x79	J2 4
+8  MX7D_PAD_EPDC_DATA10__GPIO2_IO10		0x79	J2 7
+9  MX7D_PAD_EPDC_DATA11__GPIO2_IO11		0x79	J2 8
+10 MX7D_PAD_EPDC_DATA12__GPIO2_IO12		0x79	J2 9
+11 MX7D_PAD_EPDC_DATA13__GPIO2_IO13		0x79	J2 10
+12 MX7D_PAD_EPDC_DATA14__GPIO2_IO14		0x79	J3 1
+13 MX7D_PAD_EPDC_DATA15__GPIO2_IO15		0x79	J3 2
+14 MX7D_PAD_LCD_DATA18__GPIO3_IO23		0x79	J3 5
+15 MX7D_PAD_LCD_DATA19__GPIO3_IO24		0x79	J3 6
+16 MX7D_PAD_LCD_DATA20__GPIO3_IO25		0x79	J3 7
+17 MX7D_PAD_LCD_DATA21__GPIO3_IO26		0x79	J3 8
+18 MX7D_PAD_LCD_DATA22__GPIO3_IO27		0x79	J3 9
+19 MX7D_PAD_LCD_DATA23__GPIO3_IO28		0x79	J3 10
