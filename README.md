@@ -699,7 +699,7 @@ Regarding Userspace access, sample code
 [https://github.com/varigit/linux-imx/blob/imx_4.9.88_2.0.0_ga-var01/Documentation/serial/serial-rs485.txt#L41](https://github.com/varigit/linux-imx/blob/imx_4.9.88_2.0.0_ga-var01/Documentation/serial/serial-rs485.txt#L41)
 
 Here in sample code instead of "/dev/mydevice" use /dev/ttymxc1 or /dev/ttymxc2 device. 
-Let me know if you need anything else on this regards, 
+
  
 Thanks,
 -Harshesh
