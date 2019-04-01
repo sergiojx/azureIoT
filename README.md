@@ -622,7 +622,7 @@ sergio@ubuntu:~/var_som_mx7_debian/apps/lua-5.1.5/src$ cp lauxlib.h ../../../../
 sergio@ubuntu:~/usr_lib.DEVX/usr/include/arm-linux-gnueabihf/openssl$ cp  opensslconf.h ../../openssl
 ```
 
-# GPIOs
+# VAR GPIO
 GPIO3_IO[5] = (3-1)*32+5 = 69
 
 
