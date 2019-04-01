@@ -16,6 +16,7 @@ Configure a simple MODBUS database data mapping and transmission
 -   [Step 3: Build and Run the Sample](#Build)
 -   [Next Steps](#NextSteps)
 -   [VAR GPIO](#GPIOs)
+-   [VAR UART](#UARTs)
 
 <a name="Introduction"></a>
 # Introduction
@@ -665,3 +666,37 @@ echo 103 > /sys/class/gpio/unexport
 19 MX7D_PAD_LCD_DATA23__GPIO3_IO28		0x79	J3 10
 
 ```
+
+
+# VAR UARTs
+
+The VAR-SOM-MX7/VAR-SOM-MX7-5G exposes up to 7 UART interfaces some of which are
+muxed with other peripherals. Refer to 
+[https://www.variscite.com/wp-content/uploads/2017/12/VAR-SOM-MX7_VAR-SOM-MX7-5G_datasheet.pdf](https://www.variscite.com/wp-content/uploads/2017/12/VAR-SOM-MX7_VAR-SOM-MX7-5G_datasheet.pdf)
+https://www.variscite.com/wp-content/uploads/2017/12/VAR-SOM-MX7_VAR-SOM-MX7-5G_datasheet.pdf  UART3 is used on SOM for Bluetooth interface and can be
+accessible only in when Bluetooth interface is not in use.
+
+So if you have SOM with WiFi/BT then you need to disable 
+Variscite Bluetooth setup service via below command. 
+```
+# systemctl disable variscite-bluetooth
+```
+UART mapping for IMX7 is as per below
+
+UART1 - /dev/ttymxc0 - Used as serial console
+UART2 - /dev/ttymxc1 - Available and configured
+https://github.com/varigit/linux-imx/blob/imx_4.9.88_2.0.0_ga-var01/arch/arm/boot/dts/imx7d-var-som.dtsi#L933
+UART3 - /dev/ttymxc2 - Reserved for Bluetooth purpose 
+https://github.com/varigit/debian-var/blob/debian_stretch_mx7_var02/variscite/variscite-bluetooth#L9
+Can be available on J13 if you disable Bluetooth service 
+Variscite Bluetooth setup service via below command. 
+```
+# systemctl disable variscite-bluetooth
+```
+Regarding Userspace access, sample code 
+https://github.com/varigit/linux-imx/blob/imx_4.9.88_2.0.0_ga-var01/Documentation/serial/serial-rs485.txt#L41
+Here in sample code instead of "/dev/mydevice" use /dev/ttymxc1 or /dev/ttymxc2 device. 
+Let me know if you need anything else on this regards, 
+ 
+Thanks,
+-Harshesh
