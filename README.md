@@ -623,6 +623,7 @@ sergio@ubuntu:~/usr_lib.DEVX/usr/include/arm-linux-gnueabihf/openssl$ cp  openss
 ```
 
 # VAR GPIO
+```
 GPIO3_IO[5] = (3-1)*32+5 = 69
 
 
@@ -662,3 +663,5 @@ echo 103 > /sys/class/gpio/unexport
 17 MX7D_PAD_LCD_DATA21__GPIO3_IO26		0x79	J3 8
 18 MX7D_PAD_LCD_DATA22__GPIO3_IO27		0x79	J3 9
 19 MX7D_PAD_LCD_DATA23__GPIO3_IO28		0x79	J3 10
+
+```
