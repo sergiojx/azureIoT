@@ -701,5 +701,7 @@ Regarding Userspace access, sample code
 Here in sample code instead of "/dev/mydevice" use /dev/ttymxc1 or /dev/ttymxc2 device. 
 
  
-Thanks,
--Harshesh
+# How to delete files only, but keep the directory structure?
+```
+sergio@ubuntu:~/var_som_mx7_debian/rootfs_test$ sudo find . ! -type d -delete
+```
