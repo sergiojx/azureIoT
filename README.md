@@ -705,3 +705,9 @@ Here in sample code instead of "/dev/mydevice" use /dev/ttymxc1 or /dev/ttymxc2 
 ```
 sergio@ubuntu:~/var_som_mx7_debian/rootfs_test$ sudo find . ! -type d -delete
 ```
+
+# How to copy in bash all directory and files recursive?
+```
+sergio@ubuntu:~/var_som_mx7_debian/rootfs$ sudo cp -r . ../rootfsCopy/
+```
+Where . is new firmware directory and ../rootfsCopy/ is unit /
