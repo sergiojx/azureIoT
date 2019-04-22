@@ -711,3 +711,8 @@ sergio@ubuntu:~/var_som_mx7_debian/rootfs_test$ sudo find . ! -type d -delete
 sergio@ubuntu:~/var_som_mx7_debian/rootfs$ sudo cp -r . ../rootfsCopy/
 ```
 Where . is new firmware directory and ../rootfsCopy/ is unit /
+
+# Copying base line filesys
+```
+sergio@ubuntu:~/var_som_mx7_debian$ sudo cp -avr rootfs_ORG rootfs
+```
