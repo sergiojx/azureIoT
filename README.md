@@ -708,7 +708,7 @@ sergio@ubuntu:~/var_som_mx7_debian/rootfs_test$ sudo find . ! -type d -delete
 
 # How to copy in bash all directory and files recursive?
 ```
-sergio@ubuntu:~/var_som_mx7_debian/rootfs$ sudo cp -r . ../rootfsCopy/
+sergio@ubuntu:~/var_som_mx7_debian/rootfs$ sudo cp -avr . ../rootfsCopy/
 ```
 Where . is new firmware directory and ../rootfsCopy/ is unit /
 
