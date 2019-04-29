@@ -717,6 +717,6 @@ Where . is new firmware directory and ../rootfsCopy/ is unit /
 sergio@ubuntu:~/var_som_mx7_debian$ sudo cp -avr rootfs_ORG rootfs
 ```
 # Updating Embedded Linux Devices
-## [Background](https://mkrak.org/2017/11/18/updating-embedded-linux-devices-part-0/)
-## [Update strategies](https://mkrak.org/2018/01/10/updating-embedded-linux-devices-part1/)
-## [SWUpdate](https://mkrak.org/2018/01/26/updating-embedded-linux-devices-part2/)
+#### [Background](https://mkrak.org/2017/11/18/updating-embedded-linux-devices-part-0/)
+#### [Update strategies](https://mkrak.org/2018/01/10/updating-embedded-linux-devices-part1/)
+#### [SWUpdate](https://mkrak.org/2018/01/26/updating-embedded-linux-devices-part2/)
