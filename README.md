@@ -130,7 +130,7 @@ apt-get install -y libcurl4-openssl-dev
 apt-get install -y libssl-dev
 apt-get install -y uuid-dev
 ```
- 
+### https://github.com/Azure/azure-iot-sdk-c/tree/master/iothub_client 
 ### Install rsync
 ```
 ap-get update
