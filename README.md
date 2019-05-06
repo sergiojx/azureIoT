@@ -97,6 +97,9 @@ Configure device and gateway IPs
  
 
 # Azure IoT C SDK Compilation on VAR-SOM-MX7 : NXP/Freescale iMX7
+
+## Microsoft Azure IoT Device SDK for C
+#### [Microsoft Azure IoT Device SDK for C](https://azure.github.io/azure-iot-sdk-c/index.html) 
 ## WiFi Setup
 ``
  nano /etc/wpa_supplicant.conf
@@ -132,6 +135,9 @@ apt-get install -y uuid-dev
 ```
 ### https://github.com/Azure/azure-iot-sdk-c/tree/master/iothub_client 
 ### https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-device-sdk-c-intro
+
+
+
 ### Install rsync
 ```
 ap-get update
