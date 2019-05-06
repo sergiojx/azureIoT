@@ -131,6 +131,7 @@ apt-get install -y libssl-dev
 apt-get install -y uuid-dev
 ```
 ### https://github.com/Azure/azure-iot-sdk-c/tree/master/iothub_client 
+### https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-device-sdk-c-intro
 ### Install rsync
 ```
 ap-get update
