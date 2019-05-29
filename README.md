@@ -800,3 +800,14 @@ RequireValidShell              off
 </Anonymous>
 
 ```
+
+
+### Create FTP Group
+```
+# addgroup proftpd
+```
+### Create FTP user
+
+```
+# # adduser proftpd -shell /bin/false -ingroup proftpd -home /ftpshare
+```
