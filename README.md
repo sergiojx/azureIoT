@@ -727,3 +727,76 @@ sergio@ubuntu:~/var_som_mx7_debian$ sudo cp -avr rootfs_ORG rootfs
 #### [Background](https://mkrak.org/2017/11/18/updating-embedded-linux-devices-part-0/)
 #### [Update strategies](https://mkrak.org/2018/01/10/updating-embedded-linux-devices-part1/)
 #### [SWUpdate](https://mkrak.org/2018/01/26/updating-embedded-linux-devices-part2/)
+
+
+# proftpd
+## /etc/hosts
+```
+127.0.0.1       localhost
+127.0.0.1       var-som-mx7
+::1             localhost var-som-mx7 ip6-localhost ip6-loopback
+ff02::1         ip6-allnodes
+ff02::2         ip6-allrouters
+```
+## /etc/proftpd/proftpd.conf
+```
+
+# This is a basic ProFTPD configuration file
+# It establishes a single server and a single anonymous login.
+
+ServerName                      "ProFTPD Default Installation"
+ServerType                      standalone
+DefaultServer                   on
+
+# Port 21 is the standard FTP port.
+Port                            21
+# Umask 022 is a good standard umask to prevent new dirs and files
+# from being group and world writable.
+Umask                           022
+
+# To prevent DoS attacks, set the maximum number of child processes
+# to 30.  If you need to allow more than 30 concurrent connections
+# at once, simply increase this value.  Note that this ONLY works
+# in standalone mode, in inetd mode you should use an inetd server
+# that allows you to limit maximum number of processes per service
+
+MaxInstances                    30
+
+# Set the user and group that the server normally runs at.
+User                            proftpd
+Group                           proftpd
+
+# To cause every FTP user to be "jailed" (chrooted) into their home
+# directory, uncomment this line.
+# DefaultRoot ~
+DefaultRoot /mnt/prtnuSD/logdisk
+#  If user was created with shell /bin/false, this must be declared in proftpd.conf 
+RequireValidShell              off
+
+# Normally, files should be overwritable.
+<Directory /*>
+  AllowOverwrite                on
+</Directory>
+
+# A basic anonymous configuration, no upload directories.
+<Anonymous ~proftpd>
+  User                          proftpd
+  Group                         proftpd
+  # Clients should be able to login with "anonymous" as well as "proftpd"
+  UserAlias                     anonymous proftpd
+
+  # Limit the maximum number of anonymous logins
+  MaxClients                    10
+
+  # 'welcome.msg' should be displayed at login, and '.message' displayed
+  # in each newly chdired directory.
+  DisplayLogin                  welcome.msg
+  DisplayChdir                  .message
+
+  # Limit WRITE everywhere in the anonymous chroot
+  <Limit WRITE>
+    DenyAll
+  </Limit>
+</Anonymous>
+
+```
