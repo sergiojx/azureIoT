@@ -48,29 +48,29 @@ Configure device and gateway IPs
 <a name="Create"></a>
 ## 3.1 Create a transmission agent
 
-![picture](https://bitbucket.org/sergiojx/proton-azure-iot/downloads/img1.png)
+![picture](https://github.com/sergiojx/azureIoT/blob/master//img1.png)
 ****
-![picture](https://bitbucket.org/sergiojx/proton-azure-iot/downloads/img2.png = 100x20)
+![picture](https://github.com/sergiojx/azureIoT/blob/master//img2.png = 100x20)
 
 <a name="Credentail"></a>
 ## 3.2 Set device credentials and transmission scheme
 
-![picture](https://bitbucket.org/sergiojx/proton-azure-iot/downloads/img3.png = 100x20)
+![picture](https://github.com/sergiojx/azureIoT/blob/master//img3.png = 100x20)
 ****
-![picture](https://bitbucket.org/sergiojx/proton-azure-iot/downloads/img4.png = 100x20)
+![picture](https://github.com/sergiojx/azureIoT/blob/master//img4.png = 100x20)
 
 <a name="Mapping"></a>
 ## 3.3 Map MODBUS database variables to IoT transmission frame
 
-![picture](https://bitbucket.org/sergiojx/proton-azure-iot/downloads/img5.png = 100x20)
+![picture](https://github.com/sergiojx/azureIoT/blob/master//img5.png = 100x20)
 ****
-![picture](https://bitbucket.org/sergiojx/proton-azure-iot/downloads/img6.png = 100x20)
+![picture](https://github.com/sergiojx/azureIoT/blob/master//img6.png = 100x20)
 
 
 <a name="Status"></a>
 ## 3.3 Verify tranmission status
 
-![picture](https://bitbucket.org/sergiojx/proton-azure-iot/downloads/img7.png = 100x20)
+![picture](https://github.com/sergiojx/azureIoT/blob/master//img7.png = 100x20)
 
 
 <a name="Run"></a>
